@@ -62,6 +62,14 @@ public class Book {
 		return Objects.hash(id);
 	}
 
+	public Set<Author> getAuthors() {
+		return authors;
+	}
+
+	public void setAuthors(Set<Author> authors) {
+		this.authors = authors;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
