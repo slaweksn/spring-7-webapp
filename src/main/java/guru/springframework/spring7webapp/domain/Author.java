@@ -1,11 +1,13 @@
 package guru.springframework.spring7webapp.domain;
 
 import java.util.Objects;
+import java.util.Set;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -17,7 +19,10 @@ public class Author {
 	private Long id;
 	private String firstName;
 	private String lastName;
-
+	
+	@ManyToMany(mappedBy = "books")
+	private Set<Book> books;
+	
 	public Author() {
 		super();
 	}
