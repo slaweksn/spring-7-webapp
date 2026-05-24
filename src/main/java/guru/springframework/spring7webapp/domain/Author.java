@@ -20,8 +20,8 @@ public class Author {
 	private String firstName;
 	private String lastName;
 	
-	@ManyToMany(mappedBy = "books")
-	private Set<Book> books;
+	@ManyToMany(mappedBy = "authors")
+	private Set<Book> books = new java.util.HashSet<>();
 	
 	public Author() {
 		super();

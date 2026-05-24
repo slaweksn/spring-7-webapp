@@ -27,7 +27,7 @@ public class Book {
 		joinColumns = @JoinColumn(name = "BOOK_ID"), 
 		inverseJoinColumns = @JoinColumn(name = "AUTHOR_ID")
 	)
-	private Set<Author> authors;
+	private Set<Author> authors = new java.util.HashSet<>();
 	
 	public Book() {
 		super();
